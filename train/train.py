@@ -318,7 +318,7 @@ def train():
             
             if np.isnan(tot_loss) or np.isinf(tot_loss):
                 print (gt_boxesnp)
-                raise
+                raise Exception
           
         if step % 100 == 0:
             summary_str = sess.run(summary_op)
